@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+{% load static%}
+  <link rel="stylesheet" href="{% static 'accounts/css/login.css'%}">
+
+</head>
+
+<body>
+<a href="#" class="logo">algerian|جزائري</a>
+  <div class="container">
+    
+   
+    <h2>login</h2>
+    <form  method="POST"class="login">
+      {%csrf_token%}
+      {{form.as_p}}
+      <input type="submit" value="login" class="submit" >
+    </form>
+  </div>
+<a href="../register" class="sign-up">sign up</a>
+</body>
+
+</html>

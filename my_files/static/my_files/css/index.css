@@ -1,0 +1,26 @@
+.content .content-1{
+width:98%;
+height:80%;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+overflow-y:auto;
+}
+.content h2{
+font-size:40px;
+letter-spacing:1px;
+margin-bottom:20px;
+}
+.content .content-1 .content-2{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+}
+.content .content-1 .content-2 div p{
+font-size:25px;
+letter-spacing:1px;
+margin-top:10px;
+margin-bottom:17px;
+}

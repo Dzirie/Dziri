@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'picture/css/new.css' %}">{% endblock %}
+{% block content %}
+<h1>new photo<h1>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<div>
+{{form.as_p}}
+</div>
+
+{% if form.errors or  form.non_field_errors %}
+<div>
+{% for field in form %}
+{{ field.errors }}
+{% endfor %}
+{{ form.non_field_errors }}
+</div>
+{% endif %}
+
+<button>save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,41 @@
+
+{% extends 'accounts/base.html' %}
+
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'accounts/css/home.css' %}" > {% endblock %}
+
+
+{% block content %}
+
+      <div class="first">
+      <div class="one"></div>
+      <div class="tow"></div>
+      </div>
+      <div class="second">
+      <div class="three"></div>
+      <div class="four"></div>
+      </div>
+      <div class="five">
+{% if user.is_authenticated %}       
+     <a href="{% url 'logout' %}">logout</a>
+{% else %}
+        <a href="{% url 'login'%}">login</a>
+        <a href="{% url 'register'%}">sign up</a>
+{% endif %}
+      </div>
+      
+    
+{% endblock %}
+    
+    
+
+
+
+
+
+
+
+
+
+

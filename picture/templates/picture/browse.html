@@ -1,0 +1,33 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block content %}
+{% block css %}<link rel="stylesheet" href="{% static 'picture/css/browse.css' %}">{% endblock %}
+<div class="search-bar">
+<form method="get" action="{% url 'picture:browse' %}">
+<input type="text" name="query" value="{{query}}" placeholder="search">
+<button>search</button>
+</form>
+
+
+
+<h2>Categories</h2>
+<ul>
+{% for category in categories %}
+<li><a href="{% url 'picture:browse' %}?query={{query}}&category={{category.id}}">{{category.name}}</a></li>
+{% endfor %}
+<li><a href="{% url 'picture:browse' %}">all</a></li>
+</ul>
+<hr>
+</div>
+
+<div class="images-bar">
+{% for picture in pictures %}
+<div class="image">
+<a href="{% url 'picture:detail' pk=picture.id%}">
+<img src="{{picture.image.url}}">
+</a>
+<p>{{picture.name}}</p>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

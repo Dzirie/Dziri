@@ -1,0 +1,17 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'my_files/css/index.css' %}">{% endblock %}
+{% block content %}
+<h2> my pictures</h2>
+<div class="content-1">
+{% for picture in pictures %}
+<div class="content-2">
+<a href="{% url 'picture:detail' pk=picture.id%}">
+<div><img src="{{picture.image.url}}"></div>
+</a>
+<div><p>{{picture.name}}</p></div>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

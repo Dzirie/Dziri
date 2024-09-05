@@ -1,0 +1,30 @@
+.container .content .about{
+width:80%;
+height:60%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.container .content .about .logo,.p{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.container .content .about .logo{
+width:100%;
+height:20%;
+}
+.container .content .about .p{
+width:100%;
+height:60%;
+}
+.container .content .about .logo h2{
+font-size:50px;
+color:green;
+letter-spacing:3px;
+text-transform:uppercase;
+}
+.container .content .about .p p{
+font-size:40px;
+}

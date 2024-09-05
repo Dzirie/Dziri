@@ -1,0 +1,67 @@
+
+.container .content .first, .second, .five{
+  width:100%;
+  height:32%;
+  
+}
+.container .content .first,.second{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  
+}
+.container .content .first .one{
+  background-image:url("../images/1.jpeg");
+  background-size:cover;
+  width:55%;
+  height:100%;
+  border-radius:10px;
+  
+}
+.container .content .first .tow{
+  background-image:url("../images/2.jpeg");
+  background-size:cover;
+  border-radius:10px;
+  width:40%;
+  height:80%;
+}
+.container .content .second .three,.four{
+  width:48%;
+  height:100%;
+  border-radius:10px;
+}
+.container .content .second .three{
+  background-image:url("../images/3.jpeg");
+  background-size:cover;
+}
+.container .content .second .four{
+  background-image:url("../images/4.jpeg");
+  background-size:cover;
+}
+.container .content .five{
+  background-image:url("../images/5.jpg");
+  background-size:cover;
+  border-radius:10px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  
+  
+} 
+.container .content .five a{
+  width:30%;
+  height:20%;
+  background:white;
+  border-radius:30px;
+  color:green;
+  text-decoration:none;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+  letter-spacing:1px;
+}
+.container .content .five img{
+width:40%;
+height:60%;
+}

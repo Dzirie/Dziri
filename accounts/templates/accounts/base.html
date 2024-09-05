@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en" lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <title>تراث جزائري</title>
+{%load static%}
+  <link rel="stylesheet" href="{%static 'accounts/css/base.css'%}">
+{% block css %} {% endblock %}
+</head>
+
+<body>
+<div class="container">
+    <nav>
+      <div class ="logo" ><a  href="{% url 'logo' %}" >algerian|جزائري </a></div>
+      <div class="list">
+
+      <ul>
+        <li><a href="{% url 'home'%}" >home</a></li>
+        <li><a href="{% url 'picture:photos' %}" >photos</a></li>
+{% if user.is_authenticated %}
+        <li><a href="{% url 'my_files:index' %}" >my</a></li>
+{% endif %}
+        </ul>
+        </div>
+
+    </nav>
+
+    <div class="content">
+
+      {% block content %}
+     
+      {% endblock %}
+
+    </div>
+</div>   
+
+</body>
+
+</html>
+
+

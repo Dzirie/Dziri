@@ -1,0 +1,23 @@
+w{% extends 'accounts/base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'picture/css/photos.css' %}">{% endblock %}
+
+{% block content %}
+<div class="top-bar">
+<a href="{% url 'picture:new' %}" class="new">new</a>
+<a href="{% url 'picture:browse' %}" class="browse">Browse</a>
+</div>
+
+<div class="content-1">
+{% for picture in pictures %}
+<div class="content-2">
+<a href="{% url 'picture:detail' pk=picture.id%}">
+<div class="img"><img src="{{picture.image.url}}"></div>
+</a>
+<div><p class="name">{{picture.name}}</p></div>
+</div>
+{% endfor %}
+
+</div>
+
+{% endblock %}
